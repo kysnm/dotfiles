@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/jps/.emacs.d/inits'
+let g:netrw_dirhist_2='/Users/jps/dot-emacs/dot.emacs.d/inits'
+let g:netrw_dirhist_3='/Users/jps/work/coderetreat'
+let g:netrw_dirhist_4='/Users/jps/work'
+let g:netrw_dirhist_5='/Users/jps/work/coderetreat'
+let g:netrw_dirhist_6='/Users/jps/src/dot-emacs/dot.emacs.d/site-lisp'
