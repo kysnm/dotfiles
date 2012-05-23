@@ -248,7 +248,7 @@ alias pad="plackup -MPlack::App::Directory \
 
 export EDITOR=emacsclient
 
-[[ -f $HOME/.emacs.d/shellenv.pl ]] && perl -wle \
+perl -wle \
 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
      PATH > $HOME/.emacs.d/shellenv.el
 
