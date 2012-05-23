@@ -224,16 +224,20 @@ darwin*)
 esac
 
 export GISTY_DIR="$HOME/gists"
-source $HOME/perl5/perlbrew/etc/bashrc
 
+[[ -s $HOME/perl5/perlbrew/etc/bashrc ]] && source $HOME/perl5/perlbrew/etc/bashrc
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-export VIRTUALENVWRAPPER_PYTHON=$HOME/.pythonbrew/pythons/Python-2.5.5/bin/python
-export VIRENV_USE_DISTRIBUTE=1
-export WORKON_HOME=$HOME/.virtualenvs
-source $HOME/.pythonbrew/pythons/Python-2.5.5/bin/virtualenvwrapper.sh
+if [ -s $HOME/.pythonbrew/etc/bashrc ]
+then 
+  source $HOME/.pythonbrew/etc/bashrc
+  source $HOME/.pythonbrew/pythons/Python-2.5.5/bin/virtualenvwrapper.sh
 
-source $HOME/.pythonbrew/etc/bashrc
+  export VIRTUALENVWRAPPER_PYTHON=$HOME/.pythonbrew/pythons/Python-2.5.5/bin/python
+  export VIRENV_USE_DISTRIBUTE=1
+  export WORKON_HOME=$HOME/.virtualenvs
+fi
+
 alias vless="/usr/share/vim/vim73/macros/less.sh"
 alias hg="hg --encoding=utf-8"
 
@@ -244,11 +248,13 @@ alias pad="plackup -MPlack::App::Directory \
 
 export EDITOR=emacsclient
 
- perl -wle \
-     'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
-     PATH > ~/.emacs.d/shellenv.el
+[[ -f $HOME/.emacs.d/shellenv.pl ]] && perl -wle \
+'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
+     PATH > $HOME/.emacs.d/shellenv.el
+
 export GOOGLE_KEY=anonymous
 export GOOGLE_SECRET=anonymous
+
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-. <(npm completion)
+[[ -x "`which npm 2>/dev/null`" ]] && . <(npm completion)
 export JSTESTDRIVER_HOME=~/bin
