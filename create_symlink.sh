@@ -9,8 +9,6 @@ for dotfile in .?*; do
             continue;;
         .git)
             continue;;
-        .sample)
-            continue;;
         *)
             ln -Fis "$PWD/$dotfile" $HOME
             ;;
