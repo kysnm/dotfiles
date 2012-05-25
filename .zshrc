@@ -246,7 +246,7 @@ alias pad="plackup -MPlack::App::Directory \
           -e 'Plack::App::Directory->new->to_app'"
 
 
-export EDITOR=emacsclient
+export EDITOR=vim
 
 perl -wle \
 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
