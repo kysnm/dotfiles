@@ -1,0 +1,3 @@
+#name : CONSTRAINT [..] PRIMARY KEY ...
+# --
+CONSTRAINT [${1:PK_Name}] PRIMARY KEY ${2:CLUSTERED} ([${3:ColumnName}]) 

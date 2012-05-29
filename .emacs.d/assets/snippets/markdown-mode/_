@@ -1,0 +1,3 @@
+#name : Emphasis
+# --
+_${1:Text}_ $0

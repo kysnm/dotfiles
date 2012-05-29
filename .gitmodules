@@ -1,3 +1,33 @@
 [submodule ".vim/snippets/vim-snipmate-ruby-snippets"]
 	path = .vim/snippets/vim-snipmate-ruby-snippets
 	url = https://github.com/kaichen/vim-snipmate-ruby-snippets.git
+[submodule ".emacs.d/site-lisp/apel"]
+	path = .emacs.d/site-lisp/apel
+	url = https://github.com/wanderlust/apel.git
+[submodule ".emacs.d/site-lisp/js-doc"]
+	path = .emacs.d/site-lisp/js-doc
+	url = https://github.com/mooz/js-doc.git
+[submodule ".emacs.d/site-lisp/js2-mode"]
+	path = .emacs.d/site-lisp/js2-mode
+	url = https://github.com/mooz/js2-mode.git
+[submodule ".emacs.d/site-lisp/magit"]
+	path = .emacs.d/site-lisp/magit
+	url = https://github.com/magit/magit.git
+[submodule ".emacs.d/site-lisp/rinari"]
+	path = .emacs.d/site-lisp/rinari
+	url = https://github.com/eschulte/rinari.git
+[submodule ".emacs.d/site-lisp/rhtml"]
+	path = .emacs.d/site-lisp/rhtml
+	url = https://github.com/eschulte/rhtml.git
+[submodule ".emacs.d/site-lisp/yasnippet"]
+	path = .emacs.d/site-lisp/yasnippet
+	url = https://github.com/capitaomorte/yasnippet.git
+[submodule ".emacs.d/site-lisp/cperl-mode"]
+	path = .emacs.d/site-lisp/cperl-mode
+	url = https://github.com/jrockway/cperl-mode.git
+[submodule ".emacs.d/assets/yasnippets-rails"]
+	path = .emacs.d/assets/yasnippets-rails
+	url = https://github.com/eschulte/yasnippets-rails.git
+[submodule ".emacs.d/site-lisp/twittering-mode"]
+	path = .emacs.d/site-lisp/twittering-mode
+	url = git://github.com/hayamiz/twittering-mode.git
