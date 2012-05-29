@@ -237,7 +237,16 @@ then
   export WORKON_HOME=$HOME/.virtualenvs
 fi
 
-alias vless="/usr/share/vim/vimcurrent/macros/less.sh"
+if [ -s /usr/share/vim/vim73/macros/less.sh ]
+then
+  alias vless="/usr/share/vim/vim73/macros/less.sh"
+fi
+
+if [ -s /usr/share/vim/vimcurrent/macros/less.sh ]
+then
+  alias vless="/usr/share/vim/vimcurrent/macros/less.sh"
+fi
+
 alias hg="hg --encoding=utf-8"
 
 # source $HOME/.nvm/nvm.sh
