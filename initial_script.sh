@@ -18,3 +18,6 @@ for dotfile in .?*; do
             ;;
     esac
 done
+
+wget "http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el?format=txt" -O .emacs.d/site-lisp/init-loader.el
+wget http://www.emacswiki.org/emacs/download/auto-install.el -P .emacs.d/site-lisp/
