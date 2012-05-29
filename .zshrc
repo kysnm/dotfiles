@@ -231,9 +231,8 @@ export GISTY_DIR="$HOME/gists"
 if [ -s $HOME/.pythonbrew/etc/bashrc ]
 then 
   source $HOME/.pythonbrew/etc/bashrc
-  source $HOME/.pythonbrew/pythons/Python-2.5.5/bin/virtualenvwrapper.sh
-
   export VIRTUALENVWRAPPER_PYTHON=$HOME/.pythonbrew/pythons/Python-2.5.5/bin/python
+  source $HOME/.pythonbrew/pythons/Python-2.5.5/bin/virtualenvwrapper.sh
   export VIRENV_USE_DISTRIBUTE=1
   export WORKON_HOME=$HOME/.virtualenvs
 fi
