@@ -1,5 +1,6 @@
 ;; INSTALL
 ;; (auto-install-from-emacswiki "cperl-mode")
+;; (auto-install-batch "perl-completion")
 
 (defalias 'perl-mode 'cperl-mode)
 
