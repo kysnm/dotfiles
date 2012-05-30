@@ -1,5 +1,5 @@
 ;; INSTALL
-;; (auto-install-batch "anithing")
+;; (auto-install-batch "anything")
 ;; (install-elisp "http://svn.coderepos.org/share/lang/elisp/anything-c-moccur/trunk/anything-c-moccur.el")
 ;; (install-elisp-from-emacswiki "anything-gtags.el")
 
