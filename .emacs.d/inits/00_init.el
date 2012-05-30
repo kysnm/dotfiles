@@ -84,3 +84,7 @@
 ;; Displays the time in the mode line
 (setq display-time-format "%Y-%m-%d (%a) %H:%M")
 (display-time)
+
+(if (eq system-type 'gnu/linux)
+  (setq browse-url-browser-function 'browse-url-generic
+    browse-url-generic-program "google-chrome"))
