@@ -1,4 +1,4 @@
-;;install-elisp-from-emacswiki shell-pop.el
+;;(install-elisp-from-emacswiki "shell-pop.el")
 ;; shell-pop
 ;; C-tでshellをポップアップ
 (require 'shell-pop)
