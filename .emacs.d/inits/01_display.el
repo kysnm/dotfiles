@@ -2,11 +2,11 @@
 (if window-system
     (progn
       (set-frame-parameter nil 'alpha 85)
-      (tool-bar-mode nil)
+      (tool-bar-mode 0)
       (set-scroll-bar-mode nil)
       (setq line-spacing 0.2)
       (when (>= emacs-major-version 23)
-        (tool-bar-mode nil)
+        (tool-bar-mode 0)
         (set-frame-font "Ricty-14")
         (set-fontset-font (frame-parameter nil 'font)
                           'japanese-jisx0208
