@@ -59,14 +59,14 @@
 (set-aurora-tab-width (setq default-tab-width (setq-default tab-width 4)))
 
 ;; http://masutaka.net/chalow/2009-07-02-2.html
-(defvar ctl-q-map (make-keymap))                 ;;; (★a)
-(define-key global-map (kbd "C-q") ctl-q-map)    ;;; (★b)
-
-(define-key ctl-q-map (kbd "C-q") 'quoted-insert)
-
-(define-key ctl-q-map (kbd "2") (lambda () (interactive) (set-aurora-tab-width 2 t t)))
-(define-key ctl-q-map (kbd "4") (lambda () (interactive) (set-aurora-tab-width 4 t t)))
-(define-key ctl-q-map (kbd "8") (lambda () (interactive) (set-aurora-tab-width 8 t t)))
+;; (defvar ctl-q-map (make-keymap))                 ;;; (★a)
+;; (define-key global-map "\C-q" 'ctl-q-map)    ;;; (★b)
+;; 
+;; (define-key ctl-q-map "\C-q" 'quoted-insert)
+;; 
+;; (define-key ctl-q-map "2" (lambda () (interactive) (set-aurora-tab-width 2 t t)))
+;; (define-key ctl-q-map "4" (lambda () (interactive) (set-aurora-tab-width 4 t t)))
+;; (define-key ctl-q-map "8" (lambda () (interactive) (set-aurora-tab-width 8 t t)))
 
 (c-set-offset 'case-label '+)
 
