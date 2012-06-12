@@ -73,6 +73,16 @@
              (add-to-list 'ac-sources 'ac-source-perl-completion)
              (perl-completion-mode t)))
 
+;; http://d.hatena.ne.jp/sugyan/20120103/1325523629
+(defvar ac-source-my-perl-completion
+  '((candidates . plcmp-ac-make-cands)))
+(defun my-cperl-mode-hook ()
+  (interactive)
+  (perl-completion-mode t)
+  (require 'auto-complete)
+  (add-to-list 'ac-sources 'ac-source-my-perl-completion))
+(add-hook 'cperl-mode-hook 'my-cperl-mode-hook)
+
 ;; for emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook
           '(lambda ()
