@@ -30,4 +30,4 @@
 .emacs.d/site-lisp/twittering-mode/*
 .emacs.d/site-lisp/rcodetools-0.8.5.0
 .emacs.d/assets/yasnippets-rails/*
-
+.emacs.d/session.*
