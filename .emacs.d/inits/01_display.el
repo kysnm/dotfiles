@@ -7,28 +7,23 @@
       (setq line-spacing 0.2)
       (when (>= emacs-major-version 23)
         (tool-bar-mode 0)
-        (set-frame-font "Ricty-14")
-        (set-fontset-font (frame-parameter nil 'font)
-                          'japanese-jisx0208
-                          (font-spec :family "Ricty" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          'japanese-jisx0212
-                          (font-spec :family "Ricty" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          'japanese-jisx0213-1
-                          (font-spec :family "Ricty" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          'japanese-jisx0213-2
-                          (font-spec :family "Ricty" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          'katakana-jisx0201
-                          (font-spec :family "Ricty" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          '(#x0080 . #x024F)
-                          (font-spec :family "Ricty" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          '(#x0370 . #x03FF)
-                          (font-spec :family "Ricty" :size 14)))
+        ;; http://blog.sanojimaru.com/post/19807398882/cocoa-emacs-ricty
+        ;; Fonts
+        (if (eq window-system 'x)
+            (setq s 12)
+          (setq s 15))
+        (let* ((size s)
+                (asciifont "Ricty")
+                (jpfont "Ricty")
+                (h (* size 10))
+                (fontspec (font-spec :family asciifont))
+                (jp-fontspec (font-spec :family jpfont)))
+          (set-face-attribute 'default nil :family asciifont :height h)
+          (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
+          (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
+          (set-fontset-font nil 'katakana-jisx0201 jp-fontspec)
+          (set-fontset-font nil '(#x0080 . #x024F) fontspec) 
+          (set-fontset-font nil '(#x0370 . #x03FF) fontspec)))
       (setq ns-pop-up-frames nil)))
 
 ;; color settings
