@@ -6,7 +6,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/apel")
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/evernote-mode")
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/hatena-diary")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/ghc-mod")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/ghc-mod/elisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/html-helper-mode")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/haskell-mode")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/js-doc")
