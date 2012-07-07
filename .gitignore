@@ -21,6 +21,7 @@
 .emacs.d/site-lisp/init-loader.el
 .emacs.d/site-lisp/install-elisp.el
 .emacs.d/site-lisp/cperl-mode/*
+.emacs.d/site-lisp/haskell-mode/*
 .emacs.d/site-lisp/html-helper-mode/*
 .emacs.d/site-lisp/mmm-mode/*
 .emacs.d/site-lisp/org-mode/*
