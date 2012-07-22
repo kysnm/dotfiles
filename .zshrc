@@ -205,7 +205,7 @@ esac
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 export LC_CTYPE="ja_JP.UTF-8"
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$HOME/download/flex_sdk_3/bin/:$PATH
+export PATH=$HOME/download/flex_sdk_3/bin:$PATH
 export JRUBY_HOME=~/jruby
 export GAEJ_HOME=~/appengine-java-sdk-1.2.2
 export PATH=$PATH:$JRUBY_HOME/bin:$GAEJ_HOME/bin
