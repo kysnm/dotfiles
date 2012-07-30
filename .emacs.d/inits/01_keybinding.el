@@ -8,7 +8,20 @@
 (global-set-key (kbd "C-S-o")     'join-line)
 (global-set-key (kbd "C-m")       'newline-and-indent)
 (global-set-key (kbd "C-t")       'next-multiframe-window)
-(global-set-key (kbd "M-<RET>")   'ns-toggle-fullscreen)
+(cond
+ ((eq window-system 'ns)
+  (global-set-key (kbd "M-<RET>")   'ns-toggle-fullscreen))
+ ((eq window-system 'x)
+  (defun my-fullscreen ()
+    (interactive)
+    (let ((fullscreen (frame-parameter (selected-frame) 'fullscreen)))
+      (cond
+       ((null fullscreen)
+        (set-frame-parameter (selected-frame) 'fullscreen 'fullboth))
+       (t
+        (set-frame-parameter (selected-frame) 'fullscreen 'nil))))
+    (global-set-key (kbd "M-RET")   'my-fullscreen))))
+ 
 (global-set-key (kbd "C-M-r")     'replace-regexp)
 (global-set-key (kbd "C-r")       'replace-string)
 (global-set-key (kbd "C-/")       'undo)
