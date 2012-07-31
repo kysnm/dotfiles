@@ -19,8 +19,8 @@
        ((null fullscreen)
         (set-frame-parameter (selected-frame) 'fullscreen 'fullboth))
        (t
-        (set-frame-parameter (selected-frame) 'fullscreen 'nil))))
-    (global-set-key (kbd "M-RET")   'my-fullscreen))))
+        (set-frame-parameter (selected-frame) 'fullscreen 'nil)))))
+    (global-set-key (kbd "M-RET")   'my-fullscreen)))
  
 (global-set-key (kbd "C-M-r")     'replace-regexp)
 (global-set-key (kbd "C-r")       'replace-string)
