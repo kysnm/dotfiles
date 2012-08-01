@@ -87,6 +87,10 @@
 (setq display-time-format "%Y-%m-%d (%a) %H:%M")
 (display-time)
 
+;; Default browser for Ubuntu
 (if (eq system-type 'gnu/linux)
   (setq browse-url-browser-function 'browse-url-generic
     browse-url-generic-program "chromium-browser"))
+
+;; tramp for zsh
+(setq tramp-shell-prompt-pattern "^.*[#$%>] *")
