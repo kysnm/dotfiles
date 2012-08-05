@@ -264,6 +264,7 @@ alias hg="hg --encoding=utf-8"
 alias pad="plackup -MPlack::App::Directory \
           -e 'Plack::App::Directory->new->to_app'"
 
+alias ec="emacsclient -n"
 
 export EDITOR=vim
 
