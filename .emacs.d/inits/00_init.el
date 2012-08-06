@@ -1,6 +1,7 @@
 ;; server
 (if (or (eq window-system 'x)(eq window-system 'ns))
-  (server-start))
+    (unless (server-running-p)
+      (server-start)))
 
 ;; PATH
 ;; http://d.hatena.ne.jp/syohex/20111117/1321503477
