@@ -22,6 +22,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/rcodetools-0.8.5.0")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippets-rails")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/twittering-mode")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/scala-dist/tool-support/src/emacs")
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")

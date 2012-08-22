@@ -31,6 +31,7 @@
 .emacs.d/site-lisp/rhtml/*
 .emacs.d/site-lisp/twittering-mode/*
 .emacs.d/site-lisp/rcodetools-0.8.5.0
+.emacs.d/site-lisp/scala-dist/*
 .emacs.d/assets/yasnippets-rails/*
 .emacs.d/session.*
 .vim/.netrwhist
