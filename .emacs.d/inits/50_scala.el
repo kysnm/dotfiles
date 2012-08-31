@@ -29,3 +29,7 @@
 (defadvice scala-eval-buffer (after pop-after-scala-eval-buffer)
   (pop-to-buffer scala-inf-buffer-name))
 (ad-activate 'scala-eval-buffer)
+
+;; http://d.hatena.ne.jp/tototoshi/20100927/1285595939
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)

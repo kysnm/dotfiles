@@ -37,3 +37,6 @@
 [submodule ".emacs.d/site-lisp/scala-dist"]
 	path = .emacs.d/site-lisp/scala-dist
 	url = git://github.com/scala/scala-dist.git
+[submodule ".emacs.d/site-lisp/ensime"]
+	path = .emacs.d/site-lisp/ensime
+	url = git://github.com/aemoncannon/ensime.git

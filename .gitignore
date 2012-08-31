@@ -17,6 +17,7 @@
 .emacs.d/tramp
 .emacs.d/site-lisp/auto-install.el
 .emacs.d/site-lisp/elscreen.el
+.emacs.d/site-lisp/ensime
 .emacs.d/site-lisp/gtags.el
 .emacs.d/site-lisp/init-loader.el
 .emacs.d/site-lisp/install-elisp.el
