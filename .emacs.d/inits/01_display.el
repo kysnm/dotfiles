@@ -45,3 +45,6 @@
 (set-face-foreground 'font-lock-type-face              "#FFFF7F")
 (set-face-foreground 'fringe                           "#666666")
 (set-face-background 'fringe                           "#282828")
+
+;; http://subtech.g.hatena.ne.jp/antipop/20071016/1192546147
+(setq truncate-partial-width-windows nil)
