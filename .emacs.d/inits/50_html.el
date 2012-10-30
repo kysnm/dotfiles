@@ -8,7 +8,7 @@
 
 (setq html-helper-basic-offset 4)
 (setq html-helper-item-continue-indent 0)
-(setq html-helper-never-indent t)
+(setq html-helper-never-indent nil)
 (setq html-helper-verbose nil)
 
 (defvar html-helper-new-buffer-template
