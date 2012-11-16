@@ -94,3 +94,6 @@
 
 ;; tramp for zsh
 (setq tramp-shell-prompt-pattern "^.*[#$%>] *")
+;; Remove trailing whitespace
+;; http://www.emacswiki.org/emacs/DeletingWhitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
