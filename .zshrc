@@ -1,3 +1,4 @@
+
 # users generic .zshrc file for zsh(1)
 
 ## Environment variable configuration
@@ -18,14 +19,14 @@ case ${UID} in
     PROMPT="%B%{${fg[red]}%}%/#%{${reset_color}%}%b "
     PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
     SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
-    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
         PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
     ;;
 *)
     PROMPT="%{${fg[red]}%}%/%%%{${reset_color}%} "
     PROMPT2="%{${fg[red]}%}%_%%%{${reset_color}%} "
     SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
-    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
         PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
     ;;
 esac
@@ -68,7 +69,7 @@ setopt nolistbeep
 
 ## Keybind configuration
 #
-# emacs like keybind (e.x. Ctrl-a goes to head of a line and Ctrl-e goes 
+# emacs like keybind (e.x. Ctrl-a goes to head of a line and Ctrl-e goes
 #   to end of it)
 #
 bindkey -e
@@ -156,7 +157,7 @@ darwin*)
 freebsd*)
     case ${UID} in
     0)
-        updateports() 
+        updateports()
         {
             if [ -f /usr/ports/.portsnap.INDEX ]
             then
@@ -240,7 +241,7 @@ export GISTY_DIR="$HOME/gists"
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 if [ -s $HOME/.pythonbrew/etc/bashrc ]
-then 
+then
   source $HOME/.pythonbrew/etc/bashrc
   export VIRTUALENVWRAPPER_PYTHON=$HOME/.pythonbrew/pythons/Python-2.5.5/bin/python
   source $HOME/.pythonbrew/pythons/Python-2.5.5/bin/virtualenvwrapper.sh
@@ -267,6 +268,7 @@ alias pad="plackup -MPlack::App::Directory \
 alias ec="emacsclient -n"
 
 export EDITOR=vim
+alias be='bundle exec'
 
 perl -wle \
 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
@@ -278,3 +280,5 @@ export GOOGLE_SECRET=anonymous
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 [[ -x "`which npm 2>/dev/null`" ]] && . <(npm completion)
 export JSTESTDRIVER_HOME=~/bin
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
