@@ -280,5 +280,8 @@ export GOOGLE_SECRET=anonymous
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 [[ -x "`which npm 2>/dev/null`" ]] && . <(npm completion)
 export JSTESTDRIVER_HOME=~/bin
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -s $HOME/.rbenv/bin ]
+then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
