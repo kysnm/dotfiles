@@ -61,9 +61,9 @@
 ;; http://masutaka.net/chalow/2009-07-02-2.html
 ;; (defvar ctl-q-map (make-keymap))                 ;;; (★a)
 ;; (define-key global-map "\C-q" 'ctl-q-map)    ;;; (★b)
-;; 
+;;
 ;; (define-key ctl-q-map "\C-q" 'quoted-insert)
-;; 
+;;
 ;; (define-key ctl-q-map "2" (lambda () (interactive) (set-aurora-tab-width 2 t t)))
 ;; (define-key ctl-q-map "4" (lambda () (interactive) (set-aurora-tab-width 4 t t)))
 ;; (define-key ctl-q-map "8" (lambda () (interactive) (set-aurora-tab-width 8 t t)))
@@ -97,3 +97,6 @@
 ;; Remove trailing whitespace
 ;; http://www.emacswiki.org/emacs/DeletingWhitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; revert buffer when file is changed
+(global-auto-revert-mode 1)
