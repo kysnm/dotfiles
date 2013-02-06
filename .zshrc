@@ -227,6 +227,7 @@ export PATH=~/src/gistp:"$PATH"
 export PATH=~/hatena-diary-writer:"$PATH"
 export PATH=/usr/local/mysql/bin:"$PATH"
 export PATH=~/perl5/perlbrew/bin:"$PATH"
+export PATH="$PATH":"$HOME/bin"
 
 case "${OSTYPE}" in
 darwin*)
