@@ -97,7 +97,7 @@ setopt share_history        # share command history data
 
 ## Completion configuration
 #
-fpath=(~/.zsh/functions/Completion ${fpath})
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 autoload -U compinit
 compinit
 
@@ -282,18 +282,19 @@ export GOOGLE_SECRET=anonymous
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 [[ -x "`which npm 2>/dev/null`" ]] && . <(npm completion)
 export JSTESTDRIVER_HOME=~/bin
-if [ -s $HOME/.rbenv/bin ]
-then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# for plenv
-if [ -s $HOME/.plenv/bin ]
-then
-  export PATH="$HOME/.plenv/bin:$PATH"
+# rbenv
+if [ -d ${HOME}/.rbenv  ] ; then
+  export PATH="${HOME}/.rbenv/bin:${HOME}/.rbenv/shims:${PATH}"
+  eval "$(rbenv init -)"
+fi
+
+# plenv
+if [ -d ${HOME}/.plenv  ] ; then
+  export PATH=${HOME}/.plenv/bin/:${HOME}/.plenv/shims:${PATH}
   eval "$(plenv init -)"
 fi
+
