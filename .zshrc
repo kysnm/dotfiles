@@ -153,7 +153,7 @@ darwin*)
     alias portupgrade="sudo port upgrade installed"
     alias Emacs='open -a /Applications/Emacs.app/Contents/MacOS/Emacs'
     alias emacs="/usr/local/Cellar/emacs/23.3b/Emacs.app/Contents/MacOS/Emacs -nw"
-    alias vi=vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.zshrc "$@"'
+    # alias vi=vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.zshrc "$@"'
     ;;
 freebsd*)
     case ${UID} in
@@ -298,3 +298,9 @@ if [ -d ${HOME}/.plenv  ] ; then
   eval "$(plenv init -)"
 fi
 
+source ~/.mysqlenv/etc/bashrc
+export LDFLAGS=-L/usr/local/opt/readline/lib
+export CPPFLAGS=-I/usr/local/opt/readline/include
+export GOPATH=$HOME/work/golang
+export PATH=$PATH:$GOPATH/bin
+export PATH="$PATH":$HOME/bin/depot_tools
