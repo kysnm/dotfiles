@@ -300,4 +300,10 @@ fi
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/opt/pyenv
+source ~/.mysqlenv/etc/bashrc
+export LDFLAGS=-L/usr/local/opt/readline/lib
+export CPPFLAGS=-I/usr/local/opt/readline/include
+export GOPATH=$HOME/work/golang
+export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH":$HOME/bin/depot_tools
+
