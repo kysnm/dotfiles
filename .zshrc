@@ -289,7 +289,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # rbenv
 if [ -d ${HOME}/.rbenv  ] ; then
   export PATH="${HOME}/.rbenv/bin:${HOME}/.rbenv/shims:${PATH}"
-  eval "$(rbenv init -)"
+  eval "$(rbenv init --no-rehash -)"
 fi
 
 # plenv
@@ -300,4 +300,9 @@ fi
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/opt/pyenv
+[ -d ${HOME}/.mysqlenv ] && source ~/.mysqlenv/etc/bashrc
+export LDFLAGS=-L/usr/local/opt/readline/lib
+export CPPFLAGS=-I/usr/local/opt/readline/include
+export GOPATH=$HOME/work/golang
+export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH":$HOME/bin/depot_tools
