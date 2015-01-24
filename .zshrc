@@ -307,3 +307,8 @@ export GOPATH=$HOME/work/golang
 export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH":$HOME/bin/depot_tools
 
+# added by travis gem
+[ -f ${HOME}/.travis/travis.sh ] && source ${HOME}/.travis/travis.sh
+
+[ -f ${HOME}/.zshrc-e ] && source ${HOME}/.zshrc-e
+
