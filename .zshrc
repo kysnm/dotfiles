@@ -324,3 +324,24 @@ peco-src() {
 zle -N peco-src
 bindkey '^]' peco-src
 
+# http://blog.64p.org/entry/2016/03/20/130716
+source "${HOME}/.zgen/zgen.zsh"
+
+if ! zgen saved; then
+    zgen oh-my-zsh
+
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/ssh-agent
+
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load "zsh-users/zsh-completions"
+
+    if [[ $HOST = 'www3301gi.sakura.ne.jp' ]]; then
+        zgen oh-my-zsh themes/clean
+    else
+        zgen oh-my-zsh themes/sonicradish
+    fi
+
+    zgen save
+fi
+
