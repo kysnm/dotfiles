@@ -1,4 +1,3 @@
-
 # users generic .zshrc file for zsh(1)
 
 ## Environment variable configuration
