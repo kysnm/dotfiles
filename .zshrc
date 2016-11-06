@@ -298,6 +298,7 @@ fi
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/opt/pyenv
+export PATH=${PYENV_ROOT}/shims/:$PATH
 [ -d ${HOME}/.mysqlenv ] && source ~/.mysqlenv/etc/bashrc
 export LDFLAGS=-L/usr/local/opt/readline/lib
 export CPPFLAGS=-I/usr/local/opt/readline/include
