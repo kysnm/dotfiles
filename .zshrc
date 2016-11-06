@@ -335,12 +335,6 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load "zsh-users/zsh-completions"
 
-    if [[ $HOST = 'www3301gi.sakura.ne.jp' ]]; then
-        zgen oh-my-zsh themes/clean
-    else
-        zgen oh-my-zsh themes/sonicradish
-    fi
-
     zgen save
 fi
 
