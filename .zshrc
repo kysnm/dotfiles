@@ -329,6 +329,7 @@ source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
     zgen oh-my-zsh
 
+    zgen oh-my-zsh themes/robbyrussell
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/ssh-agent
 
@@ -337,4 +338,3 @@ if ! zgen saved; then
 
     zgen save
 fi
-
