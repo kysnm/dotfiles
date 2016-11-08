@@ -338,3 +338,6 @@ if ! zgen saved; then
 
     zgen save
 fi
+
+source "${HOME}/.zshenv"
+source "${HOME}/.zsh_env"
