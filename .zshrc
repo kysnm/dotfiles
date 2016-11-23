@@ -339,5 +339,5 @@ if ! zgen saved; then
     zgen save
 fi
 
-source "${HOME}/.zshenv"
-source "${HOME}/.zsh_env"
+[ -f ${HOME}/.zshenv ] && source "${HOME}/.zshenv"
+[ -f ${HOME}/.zsh_env ] && source "${HOME}/.zsh_env"
