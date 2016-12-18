@@ -302,7 +302,7 @@ export PATH=${PYENV_ROOT}/shims/:$PATH
 [ -d ${HOME}/.mysqlenv ] && source ~/.mysqlenv/etc/bashrc
 export LDFLAGS=-L/usr/local/opt/readline/lib
 export CPPFLAGS=-I/usr/local/opt/readline/include
-export GOPATH=$HOME/work/golang
+export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH":$HOME/bin/depot_tools
 
